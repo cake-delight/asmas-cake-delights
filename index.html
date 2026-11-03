@@ -1,78 +1,61 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fffaf0">
-  <title>Asma's Cake Delight's | Homemade Cakes</title>
-  <meta name="description" content="Fresh homemade cakes made with love. Order birthday, chocolate and custom cakes from Asma's Cake Delight's.">
-  <style>
-    :root{--gold:#b58a3a;--gold-dark:#8c6726;--cream:#fffaf0;--ink:#302719;--muted:#766b5b;--line:#eadfc9}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:#fff;color:var(--ink);line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:5;background:rgba(255,250,240,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-family:Georgia,serif;font-size:clamp(18px,3vw,25px);font-weight:700;color:var(--gold-dark);line-height:1.15}
-    .brand small{display:block;font:10px system-ui;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-    .links{display:flex;gap:24px;font-size:14px;color:#5c503f}.links a:hover{color:var(--gold-dark)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:white;padding:12px 21px;border-radius:999px;font-weight:700;border:1px solid var(--gold);transition:.2s}
-    .btn:hover{background:var(--gold-dark);transform:translateY(-1px)}.btn.outline{background:transparent;color:var(--gold-dark)}
-    .hero{background:linear-gradient(110deg,#fffaf0 0%,#f8efdF 100%);padding:76px 0 70px;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:46px}
-    .eyebrow{color:var(--gold-dark);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
-    h1{font:700 clamp(38px,6vw,68px)/1.08 Georgia,serif;margin:16px 0;color:#352819}
-    h1 span{color:var(--gold-dark)}.hero p{color:var(--muted);max-width:520px;font-size:17px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
-    .hero-art{min-height:350px;border-radius:48% 48% 18px 18px;background:linear-gradient(145deg,#e8d6b2,#fff9ed);display:grid;place-items:center;position:relative;box-shadow:0 24px 60px #8b6a3420}
-    .cake-emoji{font-size:clamp(120px,20vw,220px);filter:drop-shadow(0 18px 12px #70501b25)}
-    .seal{position:absolute;right:8%;bottom:9%;background:#fff;border:1px solid var(--line);border-radius:50%;width:100px;height:100px;display:grid;place-items:center;text-align:center;color:var(--gold-dark);font:italic 15px Georgia;transform:rotate(10deg)}
-    section{padding:74px 0}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font:700 clamp(30px,4vw,42px) Georgia,serif;margin:8px 0}.section-head p{color:var(--muted);margin:0}
-    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:white;box-shadow:0 8px 25px #513a1609}
-    .product-art{height:190px;display:grid;place-items:center;background:linear-gradient(135deg,#fbf1dd,#f3e4c8);font-size:82px}
-    .card-body{padding:19px}.card h3{font:700 21px Georgia,serif;margin:0 0 7px}.card p{color:var(--muted);font-size:14px;min-height:44px;margin:0 0 15px}
-    .price{color:var(--gold-dark);font-weight:800;font-size:14px;margin-bottom:14px}
-    .card .btn{width:100%;padding:10px}
-    .about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center}
-    .about-mark{border:1px solid #d8c49e;border-radius:22px;min-height:260px;display:grid;place-items:center;background:#f4ead7;font-size:100px}
-    .about h2{font:700 38px Georgia,serif;margin:8px 0 14px}.about p{color:var(--muted)}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border:1px solid var(--line);border-radius:16px;text-align:center}.step b{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 12px;background:#f4ead7;color:var(--gold-dark);border-radius:50%}
-    .contact{background:#352819;color:#fffaf0;text-align:center}.contact h2{font:700 38px Georgia,serif;margin:8px 0}.contact p{color:#e2d5bf}.contact .btn{background:#c49a4d;border-color:#c49a4d}
-    footer{background:#241b12;color:#d9cbb5;padding:22px 0;text-align:center;font-size:13px}
-    @media(max-width:760px){.links{display:none}.hero{padding:52px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{min-height:260px}.products{grid-template-columns:1fr 1fr}.product-art{height:150px}.steps{grid-template-columns:1fr}.about-mark{min-height:180px}}
-    @media(max-width:430px){.products{grid-template-columns:1fr}.product-art{height:180px}.hero-actions .btn{width:100%}}
-  </style>
-</head>
-<body>
-<header><div class="wrap"><nav>
-  <a class="brand" href="#">Asma's Cake Delight's<small>Homemade with love</small></a>
-  <div class="links"><a href="#home">Home</a><a href="#cakes">Our Cakes</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="https://wa.me/8801629230318?text=Assalamu%20alaikum%2C%20I%20want%20to%20order%20a%20cake.">Order Now</a>
-</nav></div></header>
-<main>
-  <section class="hero" id="home"><div class="wrap hero-grid">
-    <div><div class="eyebrow">Fresh • Homemade • Made with love</div>
-      <h1>Every cake tells a <span>sweet story.</span></h1>
-      <p>আপনার বিশেষ মুহূর্তকে আরও মিষ্টি করতে ঘরোয়া যত্নে তৈরি সুস্বাদু কেক। পছন্দের কেক অর্ডার করতে আজই যোগাযোগ করুন।</p>
-      <div class="hero-actions"><a class="btn" href="#cakes">Explore Cakes</a><a class="btn outline" href="https://wa.me/8801629230318?text=Assalamu%20alaikum%2C%20I%20want%20to%20know%20about%20your%20cakes.">WhatsApp Us</a></div>
-    </div>
-    <div class="hero-art"><div class="cake-emoji">🎂</div><div class="seal">Baked<br>with love</div></div>
-  </div></section>
-  <section id="cakes"><div class="wrap"><div class="section-head"><div class="eyebrow">Our collection</div><h2>Made for your moments</h2><p>আপনার পছন্দের কেক বেছে নিয়ে WhatsApp-এ অর্ডার করুন।</p></div>
-    <div class="products">
-      <article class="card"><div class="product-art">🍫🎂</div><div class="card-body"><h3>Chocolate Cake</h3><p>চকলেটের সমৃদ্ধ স্বাদে তৈরি ঘরোয়া কেক।</p><div class="price">দাম জানতে যোগাযোগ করুন</div><a class="btn" href="https://wa.me/8801629230318?text=I%20want%20to%20order%20a%20Chocolate%20Cake.">Order on WhatsApp</a></div></article>
-      <article class="card"><div class="product-art">🍓🍰</div><div class="card-body"><h3>Strawberry Cake</h3><p>ফ্রুটি স্বাদের সুন্দর ও মজাদার কেক।</p><div class="price">দাম জানতে যোগাযোগ করুন</div><a class="btn" href="https://wa.me/8801629230318?text=I%20want%20to%20order%20a%20Strawberry%20Cake.">Order on WhatsApp</a></div></article>
-      <article class="card"><div class="product-art">🎀🎂</div><div class="card-body"><h3>Custom Birthday Cake</h3><p>আপনার পছন্দের ডিজাইন ও থিমে বিশেষ দিনের কেক।</p><div class="price">ডিজাইন অনুযায়ী দাম</div><a class="btn" href="https://wa.me/8801629230318?text=I%20want%20to%20order%20a%20custom%20birthday%20cake.%20Please%20share%20the%20details.">Order on WhatsApp</a></div></article>
-    </div>
-  </div></section>
-  <section class="about" id="about"><div class="wrap about-grid"><div class="about-mark">🧁</div><div><div class="eyebrow">A little about us</div><h2>Sweetness in every slice.</h2><p>Asma's Cake Delight's-এ প্রতিটি কেক তৈরি হয় যত্ন ও ভালোবাসা দিয়ে। জন্মদিন, ছোট আয়োজন কিংবা প্রিয়জনকে চমকে দিতে আপনার পছন্দের কেক অর্ডার করুন।</p><a class="btn" href="https://wa.me/8801629230318?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20cakes.">Talk to us</a></div></div></section>
-  <section><div class="wrap"><div class="section-head"><div class="eyebrow">Simple ordering</div><h2>How to order</h2><p>মাত্র তিনটি সহজ ধাপে অর্ডার করুন।</p></div><div class="steps">
-    <div class="step"><b>1</b><strong>Choose your cake</strong><p>পছন্দের কেক ও ডিজাইন বেছে নিন।</p></div>
-    <div class="step"><b>2</b><strong>Send your details</strong><p>WhatsApp-এ তারিখ, সাইজ ও ডিজাইন জানান।</p></div>
-    <div class="step"><b>3</b><strong>Confirm your order</strong><p>দাম ও ডেলিভারির বিষয়টি কথা বলে নিশ্চিত করুন।</p></div>
-  </div></div></section>
-  <section class="contact" id="contact"><div class="wrap"><div class="eyebrow" style="color:#e6c98e">Let's make it special</div><h2>Ready to order?</h2><p>আপনার কেকের অর্ডার বা যেকোনো প্রশ্নের জন্য WhatsApp-এ মেসেজ করুন।</p><a class="btn" href="https://wa.me/8801629230318?text=Assalamu%20alaikum%2C%20I%20want%20to%20place%20an%20order.">Chat on WhatsApp · 01629230318</a></div></section>
-</main>
-<footer><div class="wrap">© <span id="year"></span> Asma's Cake Delight's. Homemade with love.</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffaf1"><meta name="description" content="Homemade cakes made with love by Asma's Cake Delight's.">
+<title>Asma's Cake Delight's | Homemade Cakes</title>
+<style>
+:root{--gold:#ad7d35;--cream:#fffaf1;--ink:#342b22;--muted:#786e62}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif}
+.top{height:5px;background:linear-gradient(90deg,#8c6428,#ead5a7,#a87932)}
+header{position:sticky;top:0;background:#fffdf5ed;backdrop-filter:blur(9px);border-bottom:1px solid #eadfc9;z-index:4}
+.nav{max-width:1100px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:25px;color:#8d642c;font-weight:bold}.brand small{display:block;font:10px Arial;letter-spacing:3px;text-transform:uppercase;color:#8b8174;margin-top:4px}
+nav{display:flex;gap:22px;font:14px Arial}a{color:inherit;text-decoration:none}nav a:hover{color:var(--gold)}
+.hero{max-width:1100px;margin:auto;padding:65px 22px;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.eyebrow{font:11px Arial;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:bold}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.05;font-weight:normal;margin:15px 0}h1 em{color:var(--gold)}
+p{font:15px/1.8 Arial,sans-serif;color:var(--muted)}
+.btn{display:inline-block;padding:14px 21px;font:bold 12px Arial;letter-spacing:.5px;border:1px solid #c9ad7b;margin:8px 8px 0 0}
+.primary{background:#a87932;color:white}.secondary{color:#805d2e;background:#fff}
+.hero-photo{padding:12px;border:1px solid #ddc99f;background:white;box-shadow:13px 13px #eee2cb;position:relative}
+.hero-photo img{width:100%;height:410px;object-fit:cover;display:block}
+.tag{position:absolute;bottom:25px;left:-15px;background:var(--cream);border:1px solid #d8bd8b;padding:12px 17px;color:#8a642e;font-style:italic}
+section{padding:62px 22px}.inner{max-width:1100px;margin:auto}.head{text-align:center;margin-bottom:32px}.head h2,.about h2{font-size:36px;font-weight:normal;margin:10px 0}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:white;border:1px solid #eee2cd}
+.card img{width:100%;height:280px;object-fit:cover;display:block}.body{padding:18px}.body h3{font-size:22px;font-weight:normal;margin:0}.body p{font-size:13px;min-height:40px}.price{font:bold 13px Arial;color:#956a2d}
+.about{background:#f3eadb}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.note{padding:32px;text-align:center;border:1px solid #ddc99f;background:var(--cream);font-size:23px;color:#8b642c;font-style:italic}
+.order{background:white}.form{max-width:650px;margin:auto;padding:28px;background:var(--cream);border:1px solid #e4d2ae}
+label{display:block;font:13px Arial;margin:14px 0 6px;color:#5c5042}input,select,textarea{width:100%;padding:13px;border:1px solid #d9c9aa;background:white;font:14px Arial;color:#30271d}textarea{min-height:85px}
+button{width:100%;border:0;cursor:pointer;margin-top:18px}.contact{text-align:center;background:#f3eadb}footer{padding:23px;text-align:center;background:#30271d;color:#f8edda;font:12px Arial}
+@media(max-width:740px){.nav{align-items:flex-start;flex-direction:column}nav{gap:15px;flex-wrap:wrap}.hero,.about-grid{grid-template-columns:1fr}.hero{padding-top:42px}.hero-photo img{height:330px}.products{grid-template-columns:1fr}.card img{height:310px}section{padding:48px 17px}}
+</style></head><body>
+<div class="top"></div><header><div class="nav"><a class="brand" href="#">Asma's Cake Delight's<small>HOMEMADE WITH LOVE</small></a>
+<nav><a href="#home">Home</a><a href="#cakes">Our Cakes</a><a href="#about">About</a><a href="#order">Order</a></nav></div></header>
+<main><div class="hero" id="home"><div><div class="eyebrow">Fresh • Homemade • Made with love</div>
+<h1>A little sweetness for <em>every</em> celebration.</h1><p>Beautiful homemade cakes, carefully prepared for birthdays, celebrations and your sweetest moments. Choose a design and let us make it special.</p>
+<a class="btn primary" href="#order">ORDER YOUR CAKE</a><a class="btn secondary" href="#cakes">EXPLORE CAKES</a></div>
+<div class="hero-photo"><img src="chocolate-crunch-cake.jpg" alt="Chocolate crunch cake"><div class="tag">Baked with love, just for you</div></div></div>
+<section id="cakes"><div class="inner"><div class="head"><div class="eyebrow">OUR COLLECTION</div><h2>Made to make you smile</h2><p>Choose your favourite design. Custom orders are welcome.</p></div>
+<div class="products">
+<article class="card"><img src="chocolate-crunch-cake.jpg" alt="Chocolate Crunch Cake"><div class="body"><h3>Chocolate Crunch Cake</h3><p>Rich chocolate look with crunchy chocolate decorations.</p><div class="price">Price: Please ask</div></div></article>
+<article class="card"><img src="blue-rose-cake.jpg" alt="Blue Rose Cake"><div class="body"><h3>Blue Rose Cake</h3><p>Elegant blue buttercream roses with pearl details.</p><div class="price">Price: Please ask</div></div></article>
+<article class="card"><img src="chocolate-birthday-cake.jpg" alt="Chocolate Birthday Cake"><div class="body"><h3>Chocolate Birthday Cake</h3><p>Chocolate drip, cream piping and birthday style decoration.</p><div class="price">Price: Please ask</div></div></article>
+</div></div></section>
+<section class="about" id="about"><div class="inner about-grid"><div><div class="eyebrow">A LITTLE ABOUT US</div><h2>Homemade happiness in every slice.</h2><p>At Asma's Cake Delight's, every cake is made with care to add a special touch to your celebrations. From simple elegance to custom birthday designs, tell us what you have in mind.</p></div><div class="note">“Every celebration deserves something sweet.”</div></div></section>
+<section class="order" id="order"><div class="inner"><div class="head"><div class="eyebrow">LET'S MAKE IT SPECIAL</div><h2>Order your cake</h2><p>Fill in the details and send your order request through WhatsApp.</p></div>
+<form class="form" id="cakeOrder"><label for="customer">Your name</label><input id="customer" required placeholder="Enter your name">
+<label for="cake">Choose a cake</label><select id="cake"><option>Chocolate Crunch Cake</option><option>Blue Rose Cake</option><option>Chocolate Birthday Cake</option><option>Custom design</option></select>
+<label for="size">Cake size</label><select id="size"><option>1 pound</option><option>2 pounds</option><option>3 pounds</option><option>Other / discuss</option></select>
+<label for="date">Preferred date</label><input id="date" type="date">
+<label for="details">Message or design details</label><textarea id="details" placeholder="Flavour, cake message, design or delivery details"></textarea>
+<button class="btn primary" type="submit">SEND ORDER ON WHATSAPP</button></form></div></section>
+<section class="contact"><div class="inner"><div class="eyebrow">WE'D LOVE TO HEAR FROM YOU</div><h2 style="font-weight:normal">Make your day sweeter</h2><p>Ask us about cake availability, custom designs and pricing.</p><a class="btn primary" href="#order">PLACE AN ORDER</a></div></section></main>
+<footer>© <span id="year"></span> Asma's Cake Delight's • Homemade with love</footer>
+<script>
+const WHATSAPP_NUMBER="8801629230318"; // Existing number; change later to Bangladesh format without the first 0.
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("cakeOrder").addEventListener("submit",function(e){e.preventDefault();
+const msg=`Hello! I would like to order a cake.\nName: ${document.getElementById("customer").value}\nCake: ${document.getElementById("cake").value}\nSize: ${document.getElementById("size").value}\nPreferred date: ${document.getElementById("date").value||"Not specified"}\nDetails: ${document.getElementById("details").value||"None"}`;
+window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank");});
+</script></body></html>
